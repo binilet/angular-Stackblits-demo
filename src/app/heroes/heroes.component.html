@@ -1,4 +1,4 @@
 <ul  class="heroes" *ngFor="let h of heros" (click)="onSelect(h)">
-  <li><span class="badg">{{h.id}}</span>{{h.name}}</li>
+  <li><span class="badge">{{h.id}}</span>{{h.name}}</li>
 </ul>
 <app-hero-detail [hero]="selectedHero"></app-hero-detail>
