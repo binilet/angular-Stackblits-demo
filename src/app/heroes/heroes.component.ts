@@ -18,11 +18,14 @@ export class HeroesComponent implements OnInit {
   
 
   ngOnInit() {
-    this.heros = this.heroService.getHeros();
+   // this.heros = this.heroService.getHeros();//this is synchronous blocking call on actual production environment won't work
+   this.heroService.getHeroes().subscribe(heroes => this.heros = heroes);//asynchronous non-blocking call
+   this.heroService._mService.addMessage("test");
   }
   
   onSelect(h: Hero): void{
    this.selectedHero = h;
+   
   }
 
 }
