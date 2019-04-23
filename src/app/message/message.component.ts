@@ -8,11 +8,11 @@ import {MessageService} from '../message.service';
 })
 export class MessageComponent implements OnInit {
 
-  constructor(private _ms : MessageService) { }
-  _m : string[];
+  constructor(public _ms : MessageService) { }
+  //_m : string[];
+
   ngOnInit() {
-    this._ms.getMessage().subscribe(x=>this._m = x);
-    
+    //this._ms.getMessage().subscribe(x=>this._m = x);
   }
 
 }
