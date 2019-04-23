@@ -25,7 +25,7 @@ export class HeroesComponent implements OnInit {
   
   onSelect(h: Hero): void{
    this.selectedHero = h;
-   
+   this.heroService._mService.addMessage("user clicked on Hero " + this.selectedHero.name);
   }
 
 }
