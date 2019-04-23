@@ -8,8 +8,7 @@ import {Hero} from '../Hero';
 })
 export class HeroDetailComponent implements OnInit {
   @Input() hero :Hero;
-  @Input() name:string;
-  @Input() tm:string;
+ 
   constructor() { }
 
   ngOnInit() {
