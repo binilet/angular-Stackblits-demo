@@ -13,4 +13,11 @@ export class HeroServiceService {
      return of(fakeHeros);
   }
 
+  //observable<Hero> actual return type
+  getHero(id:number):Observable<Hero>
+  {
+    this._mService.addMessage(`added Hero: id=${id}`);
+    return of(fakeHeros.find(hero => hero.id === id));
+  }
+
 }
